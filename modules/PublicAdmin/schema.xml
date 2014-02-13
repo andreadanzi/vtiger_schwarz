@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_payslip</name>
+			<sql><![CDATA[CREATE TABLE vtiger_payslip(payslipid INT)]]></sql>
+		</table>
+		<table>
+			<name>vtiger_payslipcf</name>
+			<sql><![CDATA[CREATE TABLE vtiger_payslipcf(payslipid INT NOT NULL PRIMARY KEY)]]></sql>
+		</table>
+		<table>
+			<name>vtiger_payslipgrouprel</name>
+			<sql><![CDATA[CREATE TABLE vtiger_payslipgrouprel(payslipid INT NOT NULL PRIMARY KEY, groupname VARCHAR(100))]]></sql>
+		</table>
+	</tables>
+</schema>
