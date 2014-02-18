@@ -34,18 +34,21 @@ class ProjectTaskHandler extends VTEventHandler {
 			$newEvent->column_fields['modifiedtime'] = $focus->column_fields["modifiedtime"];
 			$newEvent->column_fields['parent_id'] = $focus->id;
 			$newEvent->column_fields['date_start'] = $focus->column_fields['cf_665'];// 2013-05-27
-			$newEvent->column_fields['time_start'] = '00:00';// 15:50
+			$newEvent->column_fields['time_start'] = '01:00:00';// 15:50
 			$newEvent->column_fields['due_date'] =  $newEvent->column_fields['cf_665']; // 2013-05-27
-			$newEvent->column_fields['time_end'] = '00:00';// 15:55
+			$newEvent->column_fields['time_end'] = '23:59:55';// 15:55
 			$newEvent->column_fields['duration_hours'] = 23;// 2
 			$newEvent->column_fields['duration_minutes'] = 59;// 2
+			$newEvent->column_fields['visibility'] = "Public";
+			$newEvent->column_fields['priority'] = "Medium";
 			$newEvent->column_fields['activitytype'] = "Scadenza presentazione Pratica";
 			$newEvent->column_fields['is_all_day_event'] = 1;
 			$newEvent->column_fields['eventstatus'] = "Planned";// $insp_eventstatus 
 			$newEvent->column_fields['description'] = "Scadenza della pratica " .$focus->column_fields['projecttaskname']. ", numero " .$focus->column_fields['projecttask_no'] . ", per " .$focus->column_fields['cf_666'];
 			// $newEvent->column_fields['sendnotification'] = 1; //  	vtiger_activity.sendnotification 403
-			$newEvent->column_fields['reminder_time'] = intval($focus->column_fields['cf_667'])*24*60+1;// vtiger_activity_reminder.reminder_time minuti + 1
+			$newEvent->column_fields['reminder_time'] = 1 + intval($focus->column_fields['cf_667'])*24*60;// vtiger_activity_reminder.reminder_time minuti + 1
 			$newEvent->save($module_name='Events',$longdesc=false);
+			$newEvent->activity_reminder($newEvent->id,$newEvent->column_fields['reminder_time'],0,0,'');
 			$log->debug("handleEvent ProjectTaskHandler vtiger.entity.aftersave terminated");
 		}
     }
