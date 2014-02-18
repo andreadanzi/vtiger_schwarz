@@ -1147,8 +1147,8 @@ $app_strings = array (
 'LNK_LIST_PREVIOUS' => 'Indietro',
 'LBL_JUMP_BTN' => 'SALTA',
 'LBL_ASSIGN_BUTTON_LABEL' => 'Assegna Campi',
-'LBL_MASS_EDIT' => 'Mass Edit',
-'LBL_MASSEDIT_FORM_HEADER' => 'Mass Edit - Modifica Campi',
+'LBL_MASS_EDIT' => 'Modifica Tutti',
+'LBL_MASSEDIT_FORM_HEADER' => 'Modifica Tutti - Modifica Campi',
 'Product Bundles' => 'Prodotto Bundle',
 'VTLIB_MOD_NOT_ACTIVE' => ' modulo non &egrave; attivo!',
 'LBL_VTIGER_NEWS' => 'vtiger News',
@@ -1263,6 +1263,10 @@ $app_strings = array (
 'LBL_MANDATORY_FIELD_MISSING'=>'Manca il valore in un campo obbligatorio',
 'Project'=>'Progetti',
 'ProjectTask'=>'Pratiche',
+'startdate'=>'Data di Inizio',
+'enddate'=>'Data di Fine',
+'Actual End Date' => 'Data di Fine Effettiva',
+'Target End Date' => 'Data di Fine Prevista',
 );
 
 // Translation for currency names

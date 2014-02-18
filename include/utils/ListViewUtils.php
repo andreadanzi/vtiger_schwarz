@@ -2252,6 +2252,7 @@ function getListQuery($module, $where = '') {
 		Case "HelpDesk":
 			$query = "SELECT vtiger_crmentity.crmid, vtiger_crmentity.smownerid,
 			vtiger_troubletickets.title, vtiger_troubletickets.status,
+			vtiger_troubletickets.hours, vtiger_troubletickets.category,
 			vtiger_troubletickets.priority, vtiger_troubletickets.parent_id,
 			vtiger_contactdetails.contactid, vtiger_contactdetails.firstname,
 			vtiger_contactdetails.lastname, vtiger_account.accountid,

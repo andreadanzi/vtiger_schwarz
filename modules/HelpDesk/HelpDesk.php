@@ -34,7 +34,7 @@ class HelpDesk extends CRMEntity {
 	//Pavani: Assign value to entity_table
         var $entity_table = "vtiger_crmentity";
 
-	var $sortby_fields = Array('title','status','priority','crmid','firstname','smownerid');
+	var $sortby_fields = Array('title','cf_662','crmid','parent_id','smownerid');
 
 	var $list_fields = Array(
 					//Module Sequence Numbering
@@ -44,9 +44,9 @@ class HelpDesk extends CRMEntity {
 					'Subject'=>Array('troubletickets'=>'title'),
 					'Related to'=>Array('troubletickets'=>'parent_id'),
 					'Data di riferimento'=>Array('ticketcf'=>'cf_662'),
-					'Status'=>Array('troubletickets'=>'status'),
 					'Hours'=>Array('troubletickets'=>'hours'),
 					'Spese'=>Array('ticketcf'=>'cf_661'),
+					'Category'=>Array('troubletickets'=>'category'),
 					'Assigned To'=>Array('crmentity','smownerid')
 				);
 
@@ -55,9 +55,9 @@ class HelpDesk extends CRMEntity {
 					'Subject'=>'ticket_title',
 					'Related to'=>'parent_id',
 					'Data di riferimento'=>'cf_662',
-					'Status'=>'ticketstatus',
 					'Hours'=>'hours',
 					'Spese'=>'cf_661',
+					'Category'=>'ticketcategories',
 					'Assigned To'=>'assigned_user_id'
 				     );
 
