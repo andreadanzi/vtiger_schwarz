@@ -22,9 +22,9 @@ $mod_strings = Array(
     'Project'=>'Progetti',
     //
     'SINGLE_Project' => 'Progetto',
-    'LBL_CUSTOM_INFORMATION' => 'Informazioni Addizionali',
+    'LBL_CUSTOM_INFORMATION' => 'Altre informazioni Progetto',
     'LBL_PROJECT_INFORMATION' => 'Informationi Progetto',
-    'LBL_DESCRIPTION_INFORMATION' => 'Descrizione',
+    'LBL_DESCRIPTION_INFORMATION' => 'Descrizione Progetto',
   
     'projectid' => 'ID Progetto',  
     'Project ID'=>'ID Progetto',
@@ -41,7 +41,8 @@ $mod_strings = Array(
     'progress'=>'Progresso',
     'additionalinformation'=>'Informazioni Aggiuntive',
     'linktopotentials'=>'Relazionato a',
-    'Related To' => 'Relazionato a',
+    'Related To' => 'Cliente',
+    'Related To Account' => 'Cliente',
     'administrative' => 'amministrativo',
     'operative' => 'operativo',
     'other' => 'altro',

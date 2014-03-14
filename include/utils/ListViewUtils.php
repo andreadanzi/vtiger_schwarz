@@ -26,6 +26,9 @@ require_once('include/utils/CommonUtils.php'); //new
 require_once('user_privileges/default_module_view.php'); //new
 require_once('include/utils/UserInfoUtil.php');
 require_once('include/Zend/Json.php');
+// danzi.tn@20140314 INCLUDERE HOOKS PER GESTIRE PLUGIN PER LA DECODIFICA / LOOKUP
+require_once "modules/SDK/hooks/hooks.php";
+// danzi.tn@20140314e
 
 /* * This function is used to get the list view header values in a list view
  * Param $focus - module object
@@ -1146,7 +1149,15 @@ function getSearchListViewEntries($focus, $module, $list_result, $navigation_arr
 								$value1 = strip_tags($value);
 								$value = htmlspecialchars(addslashes(html_entity_decode(strip_tags($value), ENT_QUOTES, $default_charset)), ENT_QUOTES, $default_charset); // Remove any previous html conversion
 								$count = counterValue();
-								$value = "<a href='javascript:window.close();' onclick='return vtlib_setvalue_from_popup($entity_id, \"$value\", \"$forfield\")' id =$count >$value1</a>";
+								// danzi.tn@20140314 custom popup query
+								// add_select_popup_query
+								$ret_value = filter_action( 'add_select_popup_query',array($count,$value,$entity_id,$forfield,$value1));
+								if(empty($ret_value)) {
+									$value = "<a href='javascript:window.close();' onclick='return vtlib_setvalue_from_popup($entity_id, \"$value\", \"$forfield\")' id =$count >$value1</a>";
+								} else  {
+									$value = $ret_value;
+								}
+								// danzi.tn@20140314e
 							}
 						}
 						// END
