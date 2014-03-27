@@ -426,7 +426,7 @@ $app_strings = array (
   'Sales Stage' => 'Stadio di vendita',
   'Amount' => 'Ammontare',
   'Expected Close' => 'Chiusura attesa',
-  'Subject' => 'Soggetto',
+  'Subject' => 'Oggetto',
   'Contact Name' => 'Nome Contatto',
   'Related to' => 'Relazionato a',
   'File' => 'File',
@@ -735,7 +735,7 @@ $app_strings = array (
   'To' => 'A:',
   'Date & Time' => 'Data e ora',
   'Reminder' => '[Promemoria:',
-  'Visit_Link' => 'Visita il collegamento per maggiori informazioni sull`attivit&agrave;',
+  'Visit_Link' => 'Visita il link per maggiori informazioni sull`attivit&agrave;',
   'Click here' => 'Premi qui',
   'Subject' => 'Oggetto',
   'Support_starting' => 'Inizio attivit&agrave;',
@@ -1267,6 +1267,10 @@ $app_strings = array (
 'enddate'=>'Data di Fine',
 'Actual End Date' => 'Data di Fine Effettiva',
 'Target End Date' => 'Data di Fine Prevista',
+'Timecontrol'=>'Ore e spese',
+'TimeControl'=>'Rendicontazione',
+'Stopwatch'=>'Contatore ore',
+'Invoiced on'=>'Fatture associate',
 );
 
 // Translation for currency names

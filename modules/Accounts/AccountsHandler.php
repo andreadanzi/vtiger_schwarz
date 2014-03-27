@@ -12,7 +12,8 @@ class AccountsHandler extends VTEventHandler {
 		if($eventName == 'vtiger.entity.beforesave') {
 			// Entity is about to be saved, take required action
 			$log->debug("handleEvent AccountsHandler vtiger.entity.beforesave entered");
-			
+			$data->focus->column_fields['cf_705'] = 'Project';
+			$data->focus->column_fields['cf_707'] = 'ProjectTask';
 			$log->debug("handleEvent AccountsHandler vtiger.entity.beforesave treminated");
 		}
 		if($eventName == 'vtiger.entity.aftersave') {

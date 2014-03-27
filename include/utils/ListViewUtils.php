@@ -1442,6 +1442,10 @@ function getValue($field_result, $list_result, $fieldname, $focus, $module, $ent
 		} else {
 			$value = '<a href="http://' . $field_val . '" target="_blank">' . textlength_check($temp_val) . '</a>';
 		}
+	} elseif ($uitype == 1017) { // danzi.tn@20140324 gestione dei link a entità correlate
+		$url_val = getRelatedSearchEntitiesUrl($module, $entity_id, $temp_val);
+		$value = '<a href="' . $url_val . '">' . getTranslatedString($temp_val, $temp_val) . '</a>';
+		// danzi.tn@20140324e
 	} elseif ($uitype == 13 || $uitype == 104 && ($_REQUEST['action'] != 'Popup' && $_REQUEST['file'] != 'Popup')) {
 		if ($_SESSION['internal_mailer'] == 1) {
 			//check added for email link in user detailview
