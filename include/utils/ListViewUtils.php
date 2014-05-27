@@ -27,6 +27,7 @@ require_once('user_privileges/default_module_view.php'); //new
 require_once('include/utils/UserInfoUtil.php');
 require_once('include/Zend/Json.php');
 // danzi.tn@20140314 INCLUDERE HOOKS PER GESTIRE PLUGIN PER LA DECODIFICA / LOOKUP
+// commit 27 maggio 2014
 require_once "modules/SDK/hooks/hooks.php";
 // danzi.tn@20140314e
 
